@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@300&display=swap');
+
+
+$primary : #1f2438;
+$secondary : #986253;
+$borderColor : #CCCCCC;
+$copyFontColor : #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+  }
+
+.container{
+  width: 100%;
+  background-color: $primary;
+  margin: auto;
+}
+
+.titleContainer{
+  width: 100%;
+  border-bottom: solid 1px $borderColor;
+  color: whitesmoke;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 10vh;
+}
+.mainTitle{
+  width: 60%;
+  margin: auto;
+  text-align: left;
+}
+.story {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.storyContainer{
+  text-align: center;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: $primary;
+  border-bottom: solid $secondary 2px;
+  border-left: solid $secondary 2px;
+  border-right: solid $secondary 2px;
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imgContainer{
+  grid-row: 1/2;
+  height: 15vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff6065475-435e-4bca-bdb4-9b4f95a93ea3.jpg?fit=scale-down&source=next&width=700');
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+.storyScore{
+  grid-row: 2/3;
+  color: $copyFontColor;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: left; 
+  padding-left: 3vw;
+  font-style: italic;
+  width: 100%;
+}
+
+.score{
+  vertical-align: middle;
+}
+
+.info {
+  grid-row: 3/4;
+  display: grid;
+  grid-gap: 1vh;
+  grid-template-rows: auto 1fr 1fr 2fr;
+  text-align: center;
+  color: $copyFontColor;
+  font-size: 14px;
+  width: 100%;
+}
+
+.storyContainer .title {
+  grid-row: 1/2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 5vh 15vw;
+  color: $secondary;
+}
+
+.storyContainer .link {
+    grid-row: 2/3;  
+    color: $copyFontColor;
+    padding: 0px 2vw;
+  }
+
+  .storyContainer .meta {
+    grid-row: 3/4;
+    padding: 0 10vw;
+  }
+  .authorContainer{
+    grid-row:4/5;
+    width: 100%;
+    text-align: right;
+  }
+
+  .authorInfo{
+    font-weight: bold;
+    padding-right: 1vw;
+  }
+
+
+  @media screen and (max-width:850px) {
+    .storyContainer{
+      border: solid $secondary 2px;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .imgContainer{
+      display: none;
+    }
+    .authorContainer{
+      text-align: center;
+    }
+    
+  }
+
+  @media screen and (max-width:520px) {
+    .storyContainer{
+      border: solid $secondary 2px;
+      padding: 10px;
+      overflow: hidden;
+    }
+    
+    .storyContainer .title{
+      padding: 10px;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+  
